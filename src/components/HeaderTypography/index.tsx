@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { styles } from './styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
@@ -13,11 +13,8 @@ export default function HeaderTypography({
     buttonOnclick,
 }: Props) {
     return (
-        <styles.Box>
-            <Typography
-                sx={{ typography: { sm: 'h1', xs: 'h2' } }}
-                fontWeight={700}
-            >
+        <Box sx={styles.Box}>
+            <Typography sx={styles.Typography} fontWeight={700}>
                 {title}
             </Typography>
             <Button
@@ -28,6 +25,6 @@ export default function HeaderTypography({
             >
                 {buttonTitle}
             </Button>
-        </styles.Box>
+        </Box>
     );
 }

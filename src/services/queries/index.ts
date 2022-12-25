@@ -1,5 +1,5 @@
-import { GetProfile } from "./methods";
+import { GetProfile } from './methods';
 
-export default {
+export const Queries = {
     GetProfile,
 };
