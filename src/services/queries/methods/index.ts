@@ -1,4 +1,3 @@
-import { response } from 'express';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
@@ -10,7 +9,7 @@ const userName = 'Luzia-Silva';
 export const GetProfile = () => {
     return useQuery(['user'], () =>
         axios
-            .get('https://api.github.com/users/Luzia-Silva')
+            .get(`https://api.github.com/users/${userName}`)
             .then((response) => response.data)
     );
 };

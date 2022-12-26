@@ -14,7 +14,12 @@ export default function Home() {
                 buttonTitle={p.pages.home.button}
                 buttonOnclick={() => console.log('teste 123')}
             />
-            <Profile image={user?.avatar_url} />
+            <Profile
+                image={user?.avatar_url}
+                login={user?.login}
+                bio={user?.bio}
+                githubGraphicsTheme={p.pages.profile.githubGraphicsTheme}
+            />
         </Container>
     );
 }

@@ -18,10 +18,9 @@ export default function HeaderTypography({
                 {title}
             </Typography>
             <Button
-                variant="outlined"
-                color="secondary"
                 endIcon={<ArrowForwardIcon />}
                 onClick={buttonOnclick}
+                sx={styles.Button}
             >
                 {buttonTitle}
             </Button>

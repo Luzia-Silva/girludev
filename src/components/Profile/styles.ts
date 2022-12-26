@@ -1,8 +1,16 @@
 export const styles = {
     Box: {
         display: 'flex',
-        justifyContent: 'space-between',
-        margin: '2rem 0',
+        justifyContent: 'space-around',
+        flexWrap: 'wrap',
+        margin: '2em 0',
+    },
+    BoxUser: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        maxWidth: '14em',
     },
     Avatar: {
         width: 150,
@@ -10,7 +18,22 @@ export const styles = {
     },
     Icon: {
         fontSize: '1.5rem',
-        color: '#7fbcff',
+        color: 'red',
+    },
+    List: {
+        flexDirection: 'column',
+        display: 'flex',
+        justifyContent: 'center',
+    },
+    primaryTypographyProps: {
+        fontSize: 14,
+        fontWeight: 'medium',
+        letterSpacing: 0,
+    },
+    secondaryTypographyProps: {
+        fontSize: 10,
+        fontWeight: 'medium',
+        letterSpacing: 0,
     },
 };
 

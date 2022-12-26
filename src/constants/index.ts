@@ -4,5 +4,9 @@ export default {
             title: 'Girludev',
             button: 'Conhecer',
         },
+        profile: {
+            githubGraphicsTheme: 'radical',
+            knowledgeList: [],
+        },
     },
 };
