@@ -1,5 +1,5 @@
 export const styles = {
-    Box: {
+    box: {
         display: 'flex',
         justifyContent: 'space-around',
         flexWrap: 'wrap',

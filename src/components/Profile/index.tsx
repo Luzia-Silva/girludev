@@ -1,3 +1,4 @@
+import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 import {
     Avatar,
     Badge,
@@ -7,26 +8,27 @@ import {
     ListItemIcon,
     ListItemText,
 } from '@mui/material';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import { styles } from './styles';
-import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 
 type Props = {
     image: string;
     login: string;
     bio?: string;
     githubGraphicsTheme?: string;
+    badges?: any[];
 };
 
 export default function Profile({
     image,
+
     login,
     bio,
     githubGraphicsTheme,
+    badges,
 }: Props) {
     return (
         <>
-            <Box sx={styles.Box} rowGap={2}>
+            <Box sx={styles.box} rowGap={2}>
                 <Box sx={styles.BoxUser}>
                     <Badge
                         overlap="rectangular"
@@ -82,10 +84,12 @@ export default function Profile({
                         }`}
                     />
                     <div>
-                        <img src="https://img.shields.io/badge/Ruby-323330?style=for-the-badge&logo=Ruby&logoColor=white" />
-                        <img src="https://img.shields.io/badge/Go-1572B6?style=for-the-badge&logo=Go&logoColor=white" />
-                        <img src="https://img.shields.io/badge/CSS3-323330?style=for-the-badge&logo=css3&logoColor=white" />
-                        <img src="https://img.shields.io/badge/Docker-1572B6?style=for-the-badge&logo=Docker&logoColor=white" />
+                        {badges?.map((badge, index) => (
+                            <img
+                                key={index}
+                                src={`https://img.shields.io/badge/${badge.name}-${badge.color}?style=for-the-badge&logo=${badge.name}&logoColor=white`}
+                            />
+                        ))}
                     </div>
                 </Box>
             </Box>

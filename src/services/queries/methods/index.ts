@@ -1,10 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-
-// * GITHUB START
+import user from '../../../constants';
 
 //? user to search profile in api github
-const userName = 'Luzia-Silva';
+const userName = user.login.user_name;
 
 export const GetProfile = () => {
     return useQuery(['user'], () =>
@@ -13,5 +12,3 @@ export const GetProfile = () => {
             .then((response) => response.data)
     );
 };
-
-// ! GITHUB END
