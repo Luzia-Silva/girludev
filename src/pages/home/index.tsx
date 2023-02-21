@@ -1,12 +1,12 @@
-import { CircularProgress, Container } from '@mui/material';
-import AboutMe from '../../components/AboutMe';
-import Profile from '../../components/Profile';
-import IsLoading from '../../components/IsLoading';
-import information from '../../constants';
-import { Queries } from '../../services/queries';
-import IsError from '../../components/IsError';
 import { AxiosError } from 'axios';
+import { Container } from '@mui/material';
+import AboutMe from '../../components/AboutMe';
 import Cards from '../../components/Cards';
+import IsError from '../../components/IsError';
+import IsLoading from '../../components/IsLoading';
+import Profile from '../../components/Profile';
+import { Queries } from '../../services/queries';
+import information from '../../constants';
 
 export default function Home() {
     const { data: user, isLoading, isError, error } = Queries.GetProfile();
@@ -14,7 +14,7 @@ export default function Home() {
     if (isError)
         return <IsError isError={isError} status={error as AxiosError} />;
     return (
-        <Container>
+        <Container maxWidth="lg">
             {/* <HeaderTypography
                 title={' '}
                 buttonTitle={information.blocks.home.button}
@@ -30,9 +30,11 @@ export default function Home() {
             <AboutMe
                 title={information.blocks.aboutMe.title}
                 description={information.blocks.aboutMe.description}
-                image={information.blocks.aboutMe.image}
             />
-            <Cards articles={information.database.articles} title={information.blocks.cards.title} />
+            <Cards
+                posts={information.database.posts}
+                title={information.blocks.cards.title}
+            />
         </Container>
     );
 }

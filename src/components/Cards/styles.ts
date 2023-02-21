@@ -1,9 +1,8 @@
 export const styles = {
     box: {
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
         flexWrap: 'wrap',
+        padding: { sm: '0', md: '3rem' },
     },
     grid: {
         display: 'flex',
@@ -16,13 +15,12 @@ export const styles = {
     card: {
         maxWidth: '18rem',
     },
-    h1: {
-        color: 'white',
-        fontSize: '2.5rem',
-        marginBottom: '1.5rem',
-    },
     h2: {
         color: 'white',
         fontSize: '0.4rem',
+    },
+    pagination: {
+        display: 'flex',
+        justifyContent: 'center',
     },
 };
