@@ -1,4 +1,5 @@
 type IArticles = {
+    id: string;
     image: string;
     title: string;
     date: string;
@@ -8,5 +9,5 @@ type IArticles = {
 
 export type ICardsArticles = Pick<
     IArticles,
-    'title' | 'date' | 'image' | 'tag'
+    'id' | 'title' | 'date' | 'image' | 'tag'
 >;

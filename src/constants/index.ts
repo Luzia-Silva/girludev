@@ -48,12 +48,19 @@ export default {
             image: '../assets/images/adal-lovelace.gif',
         },
         cards: {
-            title: 'Principais publicações',
+            title: 'Destaques',
+        },
+    },
+    components: {
+        cards: {
+            postedIn: 'Publicado em',
         },
     },
     database: {
         articles: [
             {
+                id: '586',
+                idCategory: '589',
                 tag: 'Data Science',
                 image: 'http://revolucaofeminina.com.br/img/datascience.png',
                 title: 'A importância da ciência de dados',
@@ -61,34 +68,18 @@ export default {
                 content: '..................',
             },
             {
+                id: '023',
+                idCategory: '589',
                 tag: 'Carreira',
                 image: 'https://149363046.v2.pressablecdn.com/wp-content/uploads/2020/11/10-vantagens-em-contratar-um-Dev-Junior.png',
                 title: 'Carrreira como Dev Júnior',
                 date: '12/08/2002',
-                content: '..................',
+                content:
+                    'A análise preditiva é o coração da atuação do cientista de dados. Ela é realizada a partir de todos os conhecimentos já abordados aqui, por meio de técnicas estatísticas utilizadas para desenvolver modelos preditivos. Eles produzem pontuações proporcionais à probabilidade de certos comportamentos acontecerem, assim, são responsáveis pela capacidade de “prever” eventos futuros. Agora que você sabe o que é Ciência de Dados, não restam dúvidas de que essa área é fundamental na Era da Informação, não é? Por isso mesmo, trata-se de uma das profissões mais promissoras da atualidade. A tendência é que ela continue crescendo, afinal, o desenvolvimento tecnológico anda a galope e exige cada vez mais o uso inteligente de dados. Para ficar por dentro de outras dicas sobre carreira, vida acadêmica e muito mais, é só seguir as redes da Uni! Tem para todos os gostos: Facebook, Twitter, Instagram, LinkedIn e YouTube.',
             },
             {
-                tag: 'As mina do TI',
-                image: 'https://www.meioemensagem.com.br/wp-content/uploads/2018/07/women-in-tech-1024x465.jpg',
-                title: 'Mulheres do TI',
-                date: '12/08/2002',
-                content: '..................',
-            },
-            {
-                tag: 'Data Science',
-                image: 'http://revolucaofeminina.com.br/img/datascience.png',
-                title: 'A importância da ciência de dados',
-                date: '12/08/2002',
-                content: '..................',
-            },
-            {
-                tag: 'Carreira',
-                image: 'https://149363046.v2.pressablecdn.com/wp-content/uploads/2020/11/10-vantagens-em-contratar-um-Dev-Junior.png',
-                title: 'Carrreira como Dev Júnior',
-                date: '12/08/2002',
-                content: '..................',
-            },
-            {
+                id: '0236',
+                idCategory: '587',
                 tag: 'As mina do TI',
                 image: 'https://www.meioemensagem.com.br/wp-content/uploads/2018/07/women-in-tech-1024x465.jpg',
                 title: 'Mulheres do TI',
