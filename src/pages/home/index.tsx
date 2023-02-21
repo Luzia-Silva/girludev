@@ -1,13 +1,12 @@
-import { Container } from '@mui/material';
 import { AxiosError } from 'axios';
-import { useParams } from 'react-router-dom';
+import { Container } from '@mui/material';
 import AboutMe from '../../components/AboutMe';
 import Cards from '../../components/Cards';
 import IsError from '../../components/IsError';
 import IsLoading from '../../components/IsLoading';
 import Profile from '../../components/Profile';
-import information from '../../constants';
 import { Queries } from '../../services/queries';
+import information from '../../constants';
 
 export default function Home() {
     const { data: user, isLoading, isError, error } = Queries.GetProfile();
@@ -33,7 +32,7 @@ export default function Home() {
                 description={information.blocks.aboutMe.description}
             />
             <Cards
-                articles={information.database.articles}
+                posts={information.database.posts}
                 title={information.blocks.cards.title}
             />
         </Container>

@@ -9,32 +9,32 @@ import {
     Pagination,
     Typography,
 } from '@mui/material';
-import { ICardsArticles } from '../../interface/IArticles';
 import { styles } from './styles';
 import information from '../../constants';
 import { useEffect, useState } from 'react';
 import Title from '../Title';
+import { ICardsPosts } from '../../interface/picks';
 
 type Props = {
-    articles: ICardsArticles[];
+    posts: ICardsPosts[];
     title: string;
 };
-export default function Cards({ articles, title }: Props) {
+export default function Cards({ posts, title }: Props) {
     const [page, setPage] = useState<number>(1);
-    const [articlesPerPages, setArticlesPerPages] = useState(6);
+    const [postsPerPages, setPostsPerPages] = useState(6);
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
         setPage(value);
     };
 
-    const articlesCount = Math.ceil(articles.length / articlesPerPages);
+    const postsCount = Math.ceil(posts.length / postsPerPages);
     const [articleSlices, setArticlesSlices] = useState(
-        articles.slice(0, articlesPerPages)
+        posts.slice(0, postsPerPages)
     );
     useEffect(() => {
-        const slicesOneNumber = page * articlesPerPages;
-        const slicesTwoNumber = slicesOneNumber - articlesPerPages;
+        const slicesOneNumber = page * postsPerPages;
+        const slicesTwoNumber = slicesOneNumber - postsPerPages;
         const slicesArticles = [slicesTwoNumber, slicesOneNumber];
-        setArticlesSlices(articles.slice(slicesArticles[0], slicesArticles[1]));
+        setArticlesSlices(posts.slice(slicesArticles[0], slicesArticles[1]));
     }, [page]);
 
     return (
@@ -46,7 +46,10 @@ export default function Cards({ articles, title }: Props) {
                         <Grid item xs={8} sm={6} md={4} sx={styles.gridItem}>
                             <Card sx={styles.card}>
                                 <CardActionArea
-                                    href={('/readsubject/' + article.id)}
+                                    href={
+                                        information.components.cards.href +
+                                        article.id
+                                    }
                                 >
                                     <CardMedia
                                         component="img"
@@ -84,7 +87,7 @@ export default function Cards({ articles, title }: Props) {
                 </Grid>
             </Box>
             <Pagination
-                count={articlesCount}
+                count={postsCount}
                 sx={styles.pagination}
                 onChange={handleChange}
             />

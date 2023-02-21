@@ -15,12 +15,17 @@ export const styles = {
         fontWeight: 800,
     },
     box: {
-        padding: { sm: '1.6rem', md: '2rem' },
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: { sm: '1.6rem', md: '4rem' },
         img: {
             maxWidth: '100%',
         },
         divider: {
             marginBottom: '2rem',
+            alignSelf: 'stretch',
         },
         h2: {
             fontSize: '1.6rem',

@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/home';
-import ReadSubject from '../pages/readSubject';
+import ReadPost from '../pages/readPost';
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/readsubject/:id" element={<ReadSubject />} />
+                <Route path="/readpost/:id" element={<ReadPost />} />
             </Routes>
         </BrowserRouter>
     );
